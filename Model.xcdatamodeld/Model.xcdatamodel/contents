@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Entry" representedClassName="Entry" syncable="YES">
+        <attribute name="bodyText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saveDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="journal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Journal" inverseName="entries" inverseEntity="Journal" syncable="YES"/>
+    </entity>
+    <entity name="Journal" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="entries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entry" inverseName="journal" inverseEntity="Entry" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entry" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Journal" positionX="-54" positionY="18" width="128" height="75"/>
+    </elements>
+</model>
